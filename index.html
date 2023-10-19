@@ -10,6 +10,7 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
     </style>
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/all.min.css" rel="stylesheet">
     <link href="style/style.css" rel="stylesheet"> <!-- Style De La HomePage -->
 </head>
 <body>
@@ -25,7 +26,7 @@
 
     <section class="explanation">
 
-        <h1 class="basic-text title-h1">
+        <h1 class="basic-text title">
             Réservez le menu qui vous convient
         </h1>
         <p class="basic-text explanation-text">
@@ -38,7 +39,36 @@
     </section>
 
     <section class="functioning">
+        <h2 class="title functioning-title">
+            Fonctionnement
+        </h2>
 
+        <div class="btn-functioning">
+            <button class="grey-btn">
+                <div class="circle-number">
+                    <i class="fa-solid fa-circle fa-2xl" style="color: #9356dc;"></i><span class="number">1</span>
+                </div>
+                <i class="fa-solid fa-mobile-screen-button fa-lg" style="color: #7e7e7e;"></i> <!-- Maybe Besoin d'avoir une animation qui lors du clic va lui donner la main-couleur -->
+                <p class="basic-text">Choisissez un restaurant</p>
+            </button>
+
+            <button class="grey-btn">
+                <div class="circle-number">
+                    <i class="fa-solid fa-circle fa-2xl" style="color: #9356dc;"></i><span class="number">2</span>
+                </div>
+                <i class="fa-solid fa-list-ul fa-lg" style="color: #7e7e7e;"></i> <!-- Maybe Besoin d'avoir une animation qui lors du clic va lui donner la main-couleur -->
+                <p class="basic-text">Composez votre menu</p>
+            </button>
+
+            <button class="grey-btn">
+                <div class="circle-number">
+                    <i class="fa-solid fa-circle fa-2xl" style="color: #9356dc;"></i><span class="number">3</span>
+                </div>
+                <i class="fa-solid fa-store fa-lg" style="color: #9356dc;"></i> <!-- Suivi du Figma bête et méchant avec direct la main couleur, surement à modifié car je devrais l'animer -->
+                <p class="basic-text">Dégustez au restaurant</p>
+            </button>
+            
+        </div>
     </section>
 </body>
 </html>

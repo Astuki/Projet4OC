@@ -7,7 +7,7 @@ $linear-gradient-btn: hsla(317, 100%, 74%, 0.75), hsl(267, 66%, 60%);
 
 
 
-@mixin btn-component{
+@mixin btn-component-main-color{
     color: white;
     background: linear-gradient($linear-gradient-btn);
     border-radius: 1.5625rem;
@@ -17,19 +17,32 @@ $linear-gradient-btn: hsla(317, 100%, 74%, 0.75), hsl(267, 66%, 60%);
     height: 3.125rem;
 }
 
+@mixin btn-component-secondary-grey{
+    background: #F6F6F6;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    height: 4.5rem;
+    width: 85%;
+    border: none;
+    border-radius: 1.25rem;
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15)
+}
+
 
 
 body{
     margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
 }
 
 .basic-text{
-    font-size: 1rem;
     font-family: 'Roboto', sans-serif;
-    font-weight: 500; /* default est en 400 */
+    font-size: 1rem;
+    font-weight: 500;
 }
-
-
 
 .header {
   display: flex;
@@ -59,7 +72,8 @@ body{
     }
 }
 
-.explanation{
+
+section.explanation{
     background-color: #F6F6F6;
     padding: 2rem 0 2rem 0;
     display: flex;
@@ -67,7 +81,7 @@ body{
     align-items: center;
     text-align: center;
     gap: 1rem;
-        .title-h1{
+        .title{ /* Attention est used pour plusieurs heading penser à en faire une fonction sans le width */
             color: black;
             margin: 0;
             width: 75%;
@@ -82,6 +96,49 @@ body{
             padding-bottom: 1rem; 
         }
         .btn{
-            @include btn-component();
+            @include btn-component-main-color();
+            font-family: 'Roboto', sans-serif;
+            font-size: 1rem;
         }
 }
+
+
+section.functioning{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: flex-start;
+    gap: 1rem;
+    .functioning-title{
+        padding-left: 5%;
+    }
+    .btn-functioning{
+        width: 100%;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center; 
+        gap: 1.5rem;
+        padding-bottom: 20%;
+        .grey-btn{
+            @include btn-component-secondary-grey();
+            .fa-lg{
+                position: relative;
+                left: -4%;
+            }
+            .circle-number{
+                position: relative;
+                left: -6%;
+                .number{
+                    font-family: 'Roboto', sans-serif;
+                    position: relative;
+                    color: white;
+                    left: -50%;
+                }
+            }
+        }
+    }
+
+}
+
+
+

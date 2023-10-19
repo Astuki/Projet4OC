@@ -1,12 +1,15 @@
 @charset "UTF-8";
 body {
   margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
 }
 
 .basic-text {
-  font-size: 1rem;
   font-family: "Roboto", sans-serif;
-  font-weight: 500; /* default est en 400 */
+  font-size: 1rem;
+  font-weight: 500;
 }
 
 .header {
@@ -37,7 +40,7 @@ body {
   font-weight: 500;
 }
 
-.explanation {
+section.explanation {
   background-color: #F6F6F6;
   padding: 2rem 0 2rem 0;
   display: flex;
@@ -46,21 +49,21 @@ body {
   text-align: center;
   gap: 1rem;
 }
-.explanation .title-h1 {
+section.explanation .title { /* Attention est used pour plusieurs heading penser à en faire une fonction sans le width */
   color: black;
   margin: 0;
   width: 75%;
   font-size: 1.5rem; /* all values are taken from Figma for now / toutes les valeurs sont prises de figma pour l'instant */
   font-weight: 700;
 }
-.explanation .explanation-text {
+section.explanation .explanation-text {
   color: #353535;
   margin: 0;
   font-size: 1.125rem;
   font-weight: 300;
   padding-bottom: 1rem;
 }
-.explanation .btn {
+section.explanation .btn {
   color: white;
   background: linear-gradient(hsla(317, 100%, 74%, 0.75), hsl(267, 66%, 60%));
   border-radius: 1.5625rem;
@@ -68,4 +71,50 @@ body {
   border: none;
   width: 13.625rem; /* Valeur de With pour Commander = 11.625rem mais même height */
   height: 3.125rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+}
+
+section.functioning {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: flex-start;
+  gap: 1rem;
+}
+section.functioning .functioning-title {
+  padding-left: 5%;
+}
+section.functioning .btn-functioning {
+  width: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  padding-bottom: 20%;
+}
+section.functioning .btn-functioning .grey-btn {
+  background: #F6F6F6;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  height: 4.5rem;
+  width: 85%;
+  border: none;
+  border-radius: 1.25rem;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+}
+section.functioning .btn-functioning .grey-btn .fa-lg {
+  position: relative;
+  left: -4%;
+}
+section.functioning .btn-functioning .grey-btn .circle-number {
+  position: relative;
+  left: -6%;
+}
+section.functioning .btn-functioning .grey-btn .circle-number .number {
+  font-family: "Roboto", sans-serif;
+  position: relative;
+  color: white;
+  left: -50%;
 }/*# sourceMappingURL=style.css.map */
