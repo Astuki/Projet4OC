@@ -30,7 +30,6 @@ $linear-gradient-btn: hsla(317, 100%, 74%, 0.75), hsl(267, 66%, 60%);
 }
 
 
-
 body{
     margin: 0;
     font-family: 'Roboto', sans-serif;
@@ -106,7 +105,6 @@ section.explanation{
 section.functioning{
     display: flex;
     flex-flow: column wrap;
-    align-items: flex-start;
     gap: 1rem;
     .functioning-title{
         padding-left: 5%;
@@ -142,3 +140,82 @@ section.functioning{
 
 
 
+section.restaurants{
+    background-color: rgb(246, 246, 246);
+    display: flex;
+    flex-flow: column wrap;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 15%;
+    .restaurant-title{
+        padding-right: 55%;
+    }
+    .card{
+        background: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column wrap;
+        border-radius: 1rem;
+        width: 90%;
+        .dishes{
+            width: 100%;
+            height: 235px; /* between desktop & mobile the height seem to be a constant */
+            object-fit: cover;  
+            border-radius: 1rem 1rem 0 0;
+        }
+    }
+}
+.under-card{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    div.card-text{
+        padding-left: 3%;
+        .menu-name{
+            margin-bottom: 5%;
+            font-size: 1.125rem;
+            font-weight: 700;
+        }
+        .light{
+            margin-top: 0;
+            font-weight: 300;
+        } 
+    }
+    div.like{
+        padding-right: 5%;
+    }
+}
+
+
+.footer{
+    background-color: $footer-bg;
+    color: white;
+    display: flex;
+    flex-flow: column;
+    padding-left: 5%;
+    padding-bottom: 5%;
+    .footer-text{
+        font-family: 'Shrikhand';
+        letter-spacing: 1px;
+        font-weight: 400;
+    }
+    .proposal, .partnership{
+        display: flex;
+        align-items: center;
+        gap: 3%;
+        position: relative;
+        left: 1%;
+    }
+    .partnership{
+        gap: 2%;
+    }
+    .lighter{
+        font-weight: 400;
+    }
+    .less-margin{
+        margin: 1%;
+    }
+}
