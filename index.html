@@ -20,7 +20,6 @@
 
     <header class="header">
         <img class="logo" src="images/logo/ohmyfood.png" alt="logo de OhMyFood">
-
         <div class="location">
             <i class="fa-solid fa-location-dot" style="color: #353535;"></i>
             <p class="basic-text location-text">Paris, Belleville</p>
@@ -35,9 +34,11 @@
         <p class="basic-text explanation-text">
             Découvrez des restaurants d'exception, sélectionnés par nos soins.
         </p>
-        <button class="btn basic-text">
-            Explorer nos restaurants      
-        </button>
+        <a href="#go-to-restaurant">
+            <button class="btn-main-color basic-text"> <!-- Btn mixin main color -->
+                Explorer nos restaurants      
+            </button>
+        </a>
 
     </section>
 
@@ -47,7 +48,7 @@
         </h2>
 
         <div class="btn-functioning">
-            <button class="grey-btn">
+            <button class="grey-btn"> <!-- Btn mixin grey secondary -->
                 <div class="circle-number">
                     <i class="fa-solid fa-circle fa-2xl" style="color: #9356dc;"></i><span class="number">1</span>
                 </div>
@@ -55,7 +56,7 @@
                 <p class="basic-text">Choisissez un restaurant</p>
             </button>
 
-            <button class="grey-btn">
+            <button class="grey-btn"> <!-- Btn mixin grey secondary -->
                 <div class="circle-number">
                     <i class="fa-solid fa-circle fa-2xl" style="color: #9356dc;"></i><span class="number">2</span>
                 </div>
@@ -63,7 +64,7 @@
                 <p class="basic-text">Composez votre menu</p>
             </button>
 
-            <button class="grey-btn">
+            <button class="grey-btn"> <!-- Btn mixin grey secondary -->
                 <div class="circle-number">
                     <i class="fa-solid fa-circle fa-2xl" style="color: #9356dc;"></i><span class="number">3</span>
                 </div>
@@ -74,61 +75,101 @@
         </div>
     </section>
 
-    <section class="restaurants">
+    <section id="go-to-restaurant" class="restaurants">
 
         <h2 class="title restaurant-title">
             Restaurants
         </h2>
 
         <article class="card">
-            <img class="dishes" src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg">
+            <a class="width" href="restaurants/palette.html"> <!-- En fait le a est sur TOUTE LA CARD -->
+                <img class="dishes" src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg">
+            </a>
+                <div class="badge-container">
+                    <span class="green-badge">
+                        Nouveau <!-- mixin green badge -->
+                    </span> 
+                </div> 
+
             <div class="under-card">
                 <div class="card-text">
                     <h3 class="menu-name">La palette du goût</h3>
                     <p class="basic-text light">Ménilmontant</p>
                 </div>
-                <div class="like">
-                    <i class="fa-regular fa-heart fa-xl" style="color: #000000;"></i>
-                </div>
+
+
+
+                <label class="like">
+                    <input class="hidden" type="checkbox">
+                        <i class="hide gradient fa-solid fa-heart fa-xl"></i>
+                        <i class="fa-regular fa-heart fa-xl" ></i>
+                    </input>
+                </label>
+
+
+
+
             </div>
         </article>
 
         <article class="card">
-            <img class="dishes" src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg">
+            <a class="width" href="restaurants/enchantee.html">
+                <img class="dishes" src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg">
+            </a>
+
+            <div class="badge-container">
+                <span class="green-badge">
+                    Nouveau <!-- mixin green badge -->
+                </span> 
+            </div> 
+
             <div class="under-card">
                 <div class="card-text">
                     <h3 class="menu-name">La note Enchantée</h3>
                     <p class="basic-text light">Charonne</p>
                 </div>
-                <div class="like">
-                    <i class="fa-regular fa-heart fa-xl" style="color: #000000;"></i>
-                </div>
+                <label class="like">
+                    <input class="hidden" type="checkbox">
+                        <i class="hide gradient fa-solid fa-heart fa-xl"></i>
+                        <i class="fa-regular fa-heart fa-xl" ></i>
+                    </input>
+                </label>
             </div>
         </article>
 
         <article class="card">
-            <img class="dishes" src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg">
+            <a class="width" href="restaurants/francais.html">
+                <img class="dishes" src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg">
+            </a>
             <div class="under-card">
                 <div class="card-text">
                     <h3 class="menu-name">À la française</h3>
                     <p class="basic-text light">Cité Rouge</p>
                 </div>
-                <div class="like">
-                    <i class="fa-regular fa-heart fa-xl" style="color: #000000;"></i>
-                </div>
+                <label class="like">
+                    <input class="hidden" type="checkbox">
+                        <i class="hide gradient fa-solid fa-heart fa-xl"></i>
+                        <i class="fa-regular fa-heart fa-xl" ></i>
+                    </input>
+                </label>
             </div>
         </article>
 
         <article class="card">
-            <img class="dishes" src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg">
+            <a class="width" href="restaurants/delice.html">
+                <img class="dishes" src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg">
+            </a>
             <div class="under-card">
                 <div class="card-text">
                     <h3 class="menu-name">Le délice des sens</h3>
                     <p class="basic-text light">Folie-Méricourt</p>
                 </div>
-                <div class="like">
-                    <i class="fa-regular fa-heart fa-xl" style="color: #000000;"></i>
-                </div>
+                <label class="like">
+                    <input class="hidden" type="checkbox">
+                        <i class="hide gradient fa-solid fa-heart fa-xl" ></i>
+                        <i class="fa-regular fa-heart fa-xl" ></i>
+                    </input>
+                </label>
             </div>
         </article>
 

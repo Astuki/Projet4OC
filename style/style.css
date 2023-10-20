@@ -1,12 +1,9 @@
 @charset "UTF-8";
 body {
   margin: 0;
-  font-family: "Roboto", sans-serif;
-  font-size: 1rem;
-  font-weight: 500;
 }
 
-.basic-text {
+body, .basic-text {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
   font-weight: 500;
@@ -63,8 +60,9 @@ section.explanation .explanation-text {
   font-weight: 300;
   padding-bottom: 1rem;
 }
-section.explanation .btn {
+section.explanation .btn-main-color {
   color: white;
+  cursor: pointer;
   background: linear-gradient(hsla(317, 100%, 74%, 0.75), hsl(267, 66%, 60%));
   border-radius: 1.5625rem;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
@@ -73,6 +71,10 @@ section.explanation .btn {
   height: 3.125rem;
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
+}
+section.explanation .btn-main-color:hover {
+  opacity: 0.75;
+  transition: opacity 300ms ease-in-out;
 }
 
 section.functioning {
@@ -103,9 +105,15 @@ section.functioning .btn-functioning .grey-btn {
   border-radius: 1.25rem;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
 }
-section.functioning .btn-functioning .grey-btn .fa-lg {
+section.functioning .btn-functioning .grey-btn .fa-mobile-screen-button, section.functioning .btn-functioning .grey-btn .fa-list-ul, section.functioning .btn-functioning .grey-btn .fa-store {
   position: relative;
   left: -4%;
+}
+section.functioning .btn-functioning .grey-btn .fa-list-ul, section.functioning .btn-functioning .grey-btn .fa-mobile-screen-button {
+  color: #7e7e7e;
+}
+section.functioning .btn-functioning .grey-btn .fa-store {
+  color: #9356dc;
 }
 section.functioning .btn-functioning .grey-btn .circle-number {
   position: relative;
@@ -131,6 +139,7 @@ section.restaurants .restaurant-title {
   padding-right: 55%;
 }
 section.restaurants .card {
+  position: relative;
   background: white;
   display: flex;
   justify-content: center;
@@ -139,12 +148,34 @@ section.restaurants .card {
   border-radius: 1rem;
   width: 90%;
 }
-section.restaurants .card .dishes {
+section.restaurants .card a.width {
   width: 100%;
-  height: 235px; /* between desktop & mobile the height seem to be a constant */
+}
+section.restaurants .card a.width .dishes {
+  width: 100%;
+  height: 235px; /* between desktop & mobile the height seem to be constant */
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 1rem 1rem 0 0;
+}
+section.restaurants .card .badge-container {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+section.restaurants .card .badge-container span.green-badge {
+  display: inline-block;
+  color: #008766;
+  background-color: #99e2d0;
+  text-align: center;
+  line-height: 1.8125rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: 0.125rem;
+  width: 5rem;
+  height: 1.8125rem;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
 }
 
 .under-card {
@@ -165,8 +196,36 @@ section.restaurants .card .dishes {
   margin-top: 0;
   font-weight: 300;
 }
-.under-card div.like {
+.under-card .like {
+  height: 24px;
   padding-right: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.under-card .like .hidden {
+  z-index: -1;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  margin: 0;
+}
+.under-card .like .hide {
+  position: absolute;
+  opacity: 0;
+}
+.under-card .like .gradient {
+  line-height: 26px;
+  background: linear-gradient(hsl(267, 66%, 60%), hsla(317, 100%, 74%, 0.75)); /* Can't use the gradient cause colors are inverted */
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+}
+.under-card .like .hidden:checked + .hide {
+  opacity: 1;
+}
+.under-card .like .hidden:checked ~ .fa-regular {
+  opacity: 0;
 }
 
 .footer {
