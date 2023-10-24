@@ -1,12 +1,80 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../style/PaletteDuGout/palette.css" rel="stylesheet">
-    <title>Palette du Goût</title>
+
+    <link href="../SCSS/restaurants.css" rel="stylesheet">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+    </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/all.min.css" rel="stylesheet">   
+    <title>Menu La Palette du Goût</title> 
+
 </head>
+
 <body>
-    
+
+    <header class="header">
+        <img class="logo" src="../images/logo/ohmyfood.png" alt="logo de OhMyFood">
+        <img class="dishes" src="../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg">  
+    </header>
+
+    <section class="menu">
+        
+        <article class="start-component-reuse">
+            <h2 class="footer-text">La palette du Goût</h2>
+            
+        </article>
+
+        <article>
+            <h3>Entrées</h3>
+            <button></button> <!-- ils sont tous interactifs faire un component à reuse -->
+            <button></button> 
+            <button></button> 
+        </article>
+
+        <article>
+            <h3>Plat</h3>
+            <button></button>
+            <button></button>
+            <button></button>
+        </article>
+
+        <article>
+            <h3>Desserts</h3>
+            <button></button>
+            <button></button>
+            <button></button>
+        </article>
+
+        <button class="btn-main-color basic-text"> <!-- Btn mixin main color -->
+            Explorer nos restaurants      
+        </button>
+    </section>
+
+    <footer class="footer">
+        <h3 class="footer-text">ohmyfood</h3>
+
+        <div class="proposal">
+            <i class="fa-solid fa-utensils" style="color: #ffffff;"></i>
+            <p class="less-margin">Proposer un restaurant</p>
+        </div>
+
+        <div class="partnership">
+            <i class="fa-solid fa-handshake-angle fa-sm" style="color: #ffffff;"></i>
+            <p class="less-margin">Devenir partenaire</p>
+        </div>
+        <div class="lighter">
+            <p class="less-margin">Mentions légales</p>
+            <p class="less-margin">Contact</p>
+        </div>
+    </footer>
+
 </body>
 </html>

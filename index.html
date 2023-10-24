@@ -9,12 +9,14 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
     </style>
+
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
     </style>
 
     <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/all.min.css" rel="stylesheet">
-    <link href="style/style.css" rel="stylesheet"> <!-- Style De La HomePage -->
+    <link href="SCSS/homepage.css" rel="stylesheet"> <!-- Style De La HomePage -->
+
 </head>
 <body>
 
@@ -50,25 +52,25 @@
         <div class="btn-functioning">
             <button class="grey-btn"> <!-- Btn mixin grey secondary -->
                 <div class="circle-number">
-                    <i class="fa-solid fa-circle fa-2xl" style="color: #9356dc;"></i><span class="number">1</span>
+                    <i class="fa-solid fa-circle fa-2xl" style="color: #9356dc;"></i><span class="number">1</span> <!--Enlever les styles -->
                 </div>
-                <i class="fa-solid fa-mobile-screen-button fa-lg" style="color: #7e7e7e;"></i> <!-- Maybe Besoin d'avoir une animation qui lors du clic va lui donner la main-couleur -->
+                <i class="hover-effect fa-solid fa-mobile-screen-button fa-lg"></i> <!-- Maybe Besoin d'avoir une animation qui lors du clic va lui donner la main-couleur Check -->
                 <p class="basic-text">Choisissez un restaurant</p>
             </button>
 
             <button class="grey-btn"> <!-- Btn mixin grey secondary -->
                 <div class="circle-number">
-                    <i class="fa-solid fa-circle fa-2xl" style="color: #9356dc;"></i><span class="number">2</span>
+                    <i class="fa-solid fa-circle fa-2xl" style="color: #9356dc;"></i><span class="number">2</span> <!--Enlever les styles -->
                 </div>
-                <i class="fa-solid fa-list-ul fa-lg" style="color: #7e7e7e;"></i> <!-- Maybe Besoin d'avoir une animation qui lors du clic va lui donner la main-couleur -->
+                <i class="hover-effect fa-solid fa-list-ul fa-lg"></i> <!-- Maybe Besoin d'avoir une animation qui lors du clic va lui donner la main-couleur Check-->
                 <p class="basic-text">Composez votre menu</p>
             </button>
 
             <button class="grey-btn"> <!-- Btn mixin grey secondary -->
                 <div class="circle-number">
-                    <i class="fa-solid fa-circle fa-2xl" style="color: #9356dc;"></i><span class="number">3</span>
+                    <i class="fa-solid fa-circle fa-2xl" style="color: #9356dc;"></i><span class="number">3</span> <!--Enlever les styles -->
                 </div>
-                <i class="fa-solid fa-store fa-lg" style="color: #9356dc;"></i> <!-- Suivi du Figma bête et méchant avec direct la main couleur, surement à modifié car je devrais l'animer -->
+                <i class="hover-effect fa-solid fa-store fa-lg"></i> <!-- Suivi du Figma bête et méchant avec direct la main couleur, surement à modifié car je devrais l'animer Check-->
                 <p class="basic-text">Dégustez au restaurant</p>
             </button>
             
@@ -82,7 +84,7 @@
         </h2>
 
         <article class="card">
-            <a class="width" href="restaurants/palette.html"> <!-- En fait le a est sur TOUTE LA CARD -->
+            <a class="width" href="restaurants/palette.html"> <!-- En fait le a est sur TOUTE LA CARD à faire  -->
                 <img class="dishes" src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg">
             </a>
                 <div class="badge-container">
@@ -91,25 +93,22 @@
                     </span> 
                 </div> 
 
-            <div class="under-card">
-                <div class="card-text">
-                    <h3 class="menu-name">La palette du goût</h3>
-                    <p class="basic-text light">Ménilmontant</p>
+                <div class="under-card">
+                    <div class="card-text">
+                        <h3 class="menu-name">La palette du goût</h3>
+                        <p class="basic-text light">Ménilmontant</p>
+                    </div>
+
+
+
+                    <label class="like">
+                        <input class="hidden" type="checkbox">
+                            <i class="hide gradient fa-solid fa-heart fa-xl"></i>
+                            <i class="fa-regular fa-heart fa-xl" ></i>
+                        </input>
+                    </label>
                 </div>
 
-
-
-                <label class="like">
-                    <input class="hidden" type="checkbox">
-                        <i class="hide gradient fa-solid fa-heart fa-xl"></i>
-                        <i class="fa-regular fa-heart fa-xl" ></i>
-                    </input>
-                </label>
-
-
-
-
-            </div>
         </article>
 
         <article class="card">
