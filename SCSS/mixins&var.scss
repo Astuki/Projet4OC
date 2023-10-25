@@ -1,3 +1,5 @@
+
+
 $greenish-bg: #99e2d0;
 $green-font: #008766;
 $main-color: #9356dc;
@@ -81,4 +83,44 @@ $linear-gradient-like: hsl(267, 66%, 60%), hsla(317, 100%, 74%, 0.75);
                 opacity: 0;
             }
     }
+}
+
+@mixin footer{
+    background-color: $footer-bg;
+    color: white;
+    display: flex;
+    flex-flow: column;
+    padding-left: 5%;
+    padding-bottom: 5%;
+    .footer-text{
+        font-family: 'Shrikhand';
+        letter-spacing: 1px;
+        font-weight: 400;
+    }
+    .proposal, .partnership{
+        display: flex;
+        align-items: center;
+        gap: 3%;
+        position: relative;
+        left: 1%;
+    }
+    .partnership{
+        gap: 2%;
+    }
+    .lighter{
+        font-weight: 400;
+    }
+    .less-margin{
+        margin: 1%;
+    }
+}
+
+@mixin logo{
+    width: 12.3125rem;
+    height: 2.25rem;
+    padding: 0.875rem 5.5625rem 0.8125rem 5.5625rem;
+}
+
+@mixin dish{
+
 }

@@ -81,7 +81,7 @@ section.functioning{
         padding-left: 5%;
     }
     .btn-functioning{
-        width: 100%;
+        max-width: 100%;
         display: flex;
         flex-flow: column wrap;
         justify-content: center;
@@ -180,31 +180,10 @@ section.restaurants{
 
 
 .footer{
-    background-color: $footer-bg;
-    color: white;
-    display: flex;
-    flex-flow: column;
-    padding-left: 5%;
-    padding-bottom: 5%;
-    .footer-text{
-        font-family: 'Shrikhand';
-        letter-spacing: 1px;
-        font-weight: 400;
-    }
-    .proposal, .partnership{
-        display: flex;
-        align-items: center;
-        gap: 3%;
-        position: relative;
-        left: 1%;
-    }
-    .partnership{
-        gap: 2%;
-    }
-    .lighter{
-        font-weight: 400;
-    }
-    .less-margin{
-        margin: 1%;
-    }
+    @include footer();
+}
+
+/* A voir pourquoi plus tard ! */
+*:not(i) {
+    overflow-x: hidden;
 }

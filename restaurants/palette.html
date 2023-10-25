@@ -21,36 +21,98 @@
 <body>
 
     <header class="header">
-        <img class="logo" src="../images/logo/ohmyfood.png" alt="logo de OhMyFood">
-        <img class="dishes" src="../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg">  
+        <div class="align">
+            <i class="fa-solid fa-arrow-left fa-lg"></i>
+            <img class="logo" src="../images/logo/ohmyfood.png" alt="logo de OhMyFood">
+        </div>  
+        <img class="dishes" src="../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg">
     </header>
 
     <section class="menu">
         
-        <article class="start-component-reuse">
-            <h2 class="footer-text">La palette du Goût</h2>
-            
+        <article class="menu-like">
+            <h2 class="menu-name">La palette du Goût</h2>
+            <label class="like">
+                <input class="hidden" type="checkbox">
+                    <i class="hide gradient fa-solid fa-heart fa-xl"></i>
+                    <i class="fa-regular fa-heart fa-xl" ></i>
+                </input>
+            </label>
         </article>
 
-        <article>
-            <h3>Entrées</h3>
-            <button></button> <!-- ils sont tous interactifs faire un component à reuse -->
-            <button></button> 
-            <button></button> 
+        <article class="dining">
+            <h3 class="stage">ENTREES</h3>
+            <button class="dish">
+                <h4 class="dish-name">Fricassée d'escargots</h4>
+                <div class="under-dish">
+                    <p>Au piment d'Espelette</p>
+                    <span class="flex-end">25€</span>
+                </div>
+            </button> <!-- ils sont tous interactifs faire un component à reuse -->
+            <button class="dish">
+                <h4 class="dish-name">Fricassée d'escargots</h4>
+                <div class="under-dish">
+                    <p>Au piment d'Espelette</p>
+                    <span class="flex-end">25€</span>
+                </div>
+            </button> 
+            <button class="dish">
+                <h4 class="dish-name">Fricassée d'escargots</h4>
+                <div class="under-dish">
+                    <p>Au piment d'Espelette</p>
+                    <span class="flex-end">25€</span>
+                </div>
+            </button>
         </article>
 
-        <article>
-            <h3>Plat</h3>
-            <button></button>
-            <button></button>
-            <button></button>
+        <article class="dining">
+            <h3 class="stage">PLATS</h3>
+            <button class="dish">
+                <h4 class="dish-name">Fricassée d'escargots</h4>
+                <div class="under-dish">
+                    <p>Au piment d'Espelette</p>
+                    <span class="flex-end">25€</span>
+                </div>
+            </button>
+            <button class="dish">
+                <h4 class="dish-name">Fricassée d'escargots</h4>
+                <div class="under-dish">
+                    <p>Au piment d'Espelette</p>
+                    <span class="flex-end">25€</span>
+                </div>
+            </button>
+            <button class="dish">
+                <h4 class="dish-name">Fricassée d'escargots</h4>
+                <div class="under-dish">
+                    <p>Au piment d'Espelette</p>
+                    <span class="flex-end">25€</span>
+                </div>
+            </button>
         </article>
 
-        <article>
-            <h3>Desserts</h3>
-            <button></button>
-            <button></button>
-            <button></button>
+        <article class="dining">
+            <h3 class="stage">DESSERTS</h3>
+            <button class="dish">
+                <h4 class="dish-name">Fricassée d'escargots</h4>
+                <div class="under-dish">
+                    <p>Au piment d'Espelette</p>
+                    <span class="flex-end">25€</span>
+                </div>
+            </button>
+            <button class="dish">
+                <h4 class="dish-name">Fricassée d'escargots</h4>
+                <div class="under-dish">
+                    <p>Au piment d'Espelette</p>
+                    <span class="flex-end">25€</span>
+                </div>
+            </button>
+            <button class="dish">
+                <h4 class="dish-name">Fricassée d'escargots</h4>
+                <div class="under-dish">
+                    <p>Au piment d'Espelette</p>
+                    <span class="flex-end">25€</span>
+                </div>
+            </button>
         </article>
 
         <button class="btn-main-color basic-text"> <!-- Btn mixin main color -->

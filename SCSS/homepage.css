@@ -88,7 +88,7 @@ section.functioning .functioning-title {
   padding-left: 5%;
 }
 section.functioning .btn-functioning {
-  width: 100%;
+  max-width: 100%;
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
@@ -258,4 +258,9 @@ section.restaurants .card .badge-container span.green-badge {
 }
 .footer .less-margin {
   margin: 1%;
+}
+
+/* A voir pourquoi plus tard ! */
+*:not(i) {
+  overflow-x: hidden;
 }/*# sourceMappingURL=homepage.css.map */
