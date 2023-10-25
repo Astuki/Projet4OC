@@ -1,12 +1,144 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../style/DeliceDesSens/delice.css" rel="stylesheet">
-    <title>Délice des sens</title>
+
+    <link href="../SCSS/restaurants.css" rel="stylesheet">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+    </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/all.min.css" rel="stylesheet">   
+    <title>Menu La Palette du Goût</title> 
+
 </head>
+
 <body>
-    <a href="../index.html">HomePage</a>
+
+    <header class="header">
+        <div class="align">
+            <a class="link" href="../index.html">
+                <i class="fa-solid fa-arrow-left fa-lg"></i>
+            </a>
+            <img class="logo" src="../images/logo/ohmyfood.png" alt="logo de OhMyFood">
+        </div> 
+        <img class="dishes" src="../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"> 
+    </header>
+
+    <section class="menu">
+        
+        <article class="menu-like">
+            <h2 class="menu-name">Le délice des sens</h2>
+            <label class="like">
+                <input class="hidden" type="checkbox">
+                    <i class="hide gradient fa-solid fa-heart fa-xl"></i>
+                    <i class="fa-regular fa-heart fa-xl" ></i>
+                </input>
+            </label>
+        </article>
+
+        <article class="dining">
+            <h3 class="stage">ENTREES</h3>
+            <button class="dish">
+                <h4 class="dish-name">Tartare de thon</h4>
+                <div class="under-dish">
+                    <p class="dish-text">Assaisonné au yuzu</p>
+                    <span class="flex-end">25€</span>
+                </div>
+            </button> <!-- ils sont tous interactifs faire un component à reuse -->
+            <button class="dish">
+                <h4 class="dish-name">Bouchée de homard croustillant</h4>
+                <div class="under-dish">
+                    <p class="dish-text">Et sa farandole de petits légumes</p>
+                    <span class="flex-end">35€</span>
+                </div>
+            </button> 
+            <button class="dish">
+                <h4 class="dish-name">Poulet rôti aux herbes de Provence</h4>
+                <div class="under-dish">
+                    <p class="dish-text">Et sa crème de truffe</p>
+                    <span class="flex-end">40€</span>
+                </div>
+            </button>
+        </article>
+
+        <article class="dining">
+            <h3 class="stage">PLATS</h3>
+            <button class="dish">
+                <h4 class="dish-name">Poulet rôti aux herbes de Provence</h4>
+                <div class="under-dish">
+                    <p>Et sa crème de truffe</p>
+                    <span class="flex-end">40€</span>
+                </div>
+            </button>
+            <button class="dish">
+                <h4 class="dish-name">Langouste rôtie</h4>
+                <div class="under-dish">
+                    <p>Et ses légumes de saison</p>
+                    <span class="flex-end">35€</span>
+                </div>
+            </button>
+            <button class="dish">
+                <h4 class="dish-name">Côte de boeuf Angus</h4>
+                <div class="under-dish">
+                    <p>Et sa purée de panais</p>
+                    <span class="flex-end">44€</span>
+                </div>
+            </button>
+        </article>
+
+        <article class="dining">
+            <h3 class="stage">DESSERTS</h3>
+            <button class="dish">
+                <h4 class="dish-name">Farandole de desserts</h4>
+                <div class="under-dish">
+                    <p class="dish-text">Du chef</p>
+                    <span class="flex-end">18€</span>
+                </div>
+            </button>
+            <button class="dish">
+                <h4 class="dish-name">Crème Brûlée</h4>
+                <div class="under-dish">
+                    <p class="dish-text">Revisitée</p>
+                    <span class="flex-end">22€</span>
+                </div>
+            </button>
+            <button class="dish">
+                <h4 class="dish-name">Tiramisu</h4>
+                <div class="under-dish">
+                    <p class="dish-text">A la noisette</p>
+                    <span class="flex-end">23€</span>
+                </div>
+            </button>
+        </article>
+
+        <button class="btn-main-color basic-text"> <!-- Btn mixin main color -->
+            Commander   
+        </button>
+    </section>
+
+    <footer class="footer">
+        <h3 class="footer-text">ohmyfood</h3>
+
+        <div class="proposal">
+            <i class="fa-solid fa-utensils" style="color: #ffffff;"></i>
+            <p class="less-margin">Proposer un restaurant</p>
+        </div>
+
+        <div class="partnership">
+            <i class="fa-solid fa-handshake-angle fa-sm" style="color: #ffffff;"></i>
+            <p class="less-margin">Devenir partenaire</p>
+        </div>
+        <div class="lighter">
+            <p class="less-margin">Mentions légales</p>
+            <p class="less-margin">Contact</p>
+        </div>
+    </footer>
+
 </body>
 </html>

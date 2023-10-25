@@ -118,6 +118,7 @@ section.functioning .btn-functioning .grey-btn .hover-effect:hover {
   color: #9356dc;
 }
 section.functioning .btn-functioning .grey-btn .circle-number {
+  overflow-x: visible;
   position: relative;
   left: -20px;
 }
@@ -247,11 +248,6 @@ section.restaurants .card .badge-container span.green-badge {
   display: flex;
   align-items: center;
   gap: 3%;
-  position: relative;
-  left: 1%;
-}
-.footer .partnership {
-  gap: 2%;
 }
 .footer .lighter {
   font-weight: 400;
@@ -261,6 +257,8 @@ section.restaurants .card .badge-container span.green-badge {
 }
 
 /* A voir pourquoi plus tard ! */
-*:not(i) {
-  overflow-x: hidden;
-}/*# sourceMappingURL=homepage.css.map */
+/*
+footer{
+    overflow-x: hidden;
+}
+*//*# sourceMappingURL=homepage.css.map */

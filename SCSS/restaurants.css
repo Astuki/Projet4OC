@@ -22,7 +22,11 @@ body, .basic-text {
   align-items: center;
   width: 100%;
 }
-.header .align .fa-arrow-left {
+.header .align .link {
+  color: black;
+  text-decoration: none;
+}
+.header .align .link .fa-arrow-left {
   position: relative;
   left: 25px;
 }
@@ -33,6 +37,12 @@ body, .basic-text {
 }
 .header .dishes {
   width: 100%;
+  height: 250px; /* temporaire */
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -1;
+  margin-bottom: -30px;
+  overflow-y: hidden;
 }
 
 .menu {
@@ -126,6 +136,15 @@ body, .basic-text {
   align-items: center;
   justify-content: space-between;
 }
+.menu .dining .dish .under-dish .dish-text {
+  margin-top: 5px;
+  font-weight: 300;
+}
+.menu .dining .dish .under-dish .flex-end {
+  font-size: 15px;
+  color: #353535;
+  font-weight: 700;
+}
 
 .btn-main-color {
   /* Renseigner des paramètres sur les mixins */
@@ -155,12 +174,7 @@ body, .basic-text {
 .footer .proposal, .footer .partnership {
   display: flex;
   align-items: center;
-  gap: 3%;
-  position: relative;
-  left: 1%;
-}
-.footer .partnership {
-  gap: 2%;
+  gap: 7%;
 }
 .footer .lighter {
   font-weight: 400;
@@ -171,6 +185,10 @@ body, .basic-text {
 
 /* a voir mentorat */
 .align {
+  overflow-x: hidden;
+}
+
+.footer {
   overflow-x: hidden;
 }
 

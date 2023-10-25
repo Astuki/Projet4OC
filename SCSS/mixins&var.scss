@@ -3,7 +3,7 @@
 $greenish-bg: #99e2d0;
 $green-font: #008766;
 $main-color: #9356dc;
-$footer-bg: #353535;
+$darker: #353535;
 
 $linear-gradient-btn: hsla(317, 100%, 74%, 0.75), hsl(267, 66%, 60%);
 $linear-gradient-like: hsl(267, 66%, 60%), hsla(317, 100%, 74%, 0.75);
@@ -86,7 +86,7 @@ $linear-gradient-like: hsl(267, 66%, 60%), hsla(317, 100%, 74%, 0.75);
 }
 
 @mixin footer{
-    background-color: $footer-bg;
+    background-color: $darker;
     color: white;
     display: flex;
     flex-flow: column;
@@ -100,12 +100,8 @@ $linear-gradient-like: hsl(267, 66%, 60%), hsla(317, 100%, 74%, 0.75);
     .proposal, .partnership{
         display: flex;
         align-items: center;
-        gap: 3%;
-        position: relative;
-        left: 1%;
-    }
-    .partnership{
-        gap: 2%;
+        gap: 4%;
+        padding-left: 1%;
     }
     .lighter{
         font-weight: 400;

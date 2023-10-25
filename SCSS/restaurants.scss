@@ -20,9 +20,13 @@ body, .basic-text{
         display: flex;
         align-items: center;
         width: 100%;
-        .fa-arrow-left{
-            position: relative;
-            left: 25px;
+        .link{
+            color: black;
+            text-decoration: none;
+            .fa-arrow-left{
+                position: relative;
+                left: 25px;
+            }
         }
         .logo{
             @include logo();
@@ -30,6 +34,11 @@ body, .basic-text{
     }
     .dishes{
         width: 100%;
+        height: 250px;/* temporaire */
+        object-fit: cover;
+        z-index: -1;
+        margin-bottom: -30px;
+        overflow-y: hidden;
     }
 }
 
@@ -89,6 +98,15 @@ body, .basic-text{
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
+                .dish-text{
+                    margin-top: 5px;
+                    font-weight: 300;
+                }
+                .flex-end{
+                    font-size: 15px;
+                    color: $darker;
+                    font-weight: 700;
+                }
             }
         }
     }
@@ -106,6 +124,9 @@ body, .basic-text{
 /* a voir mentorat */
 .align{
     overflow-x: hidden; 
+}
+.footer{
+    overflow-x: hidden;
 }
 
 /* a voir pour l'image à faire passer dessous au mentorat */

@@ -10,6 +10,7 @@ body, .basic-text{
     font-weight: 500;
 }
 
+
 .header {
   display: flex;
   flex-flow: column wrap;
@@ -101,6 +102,7 @@ section.functioning{
                 color: $main-color;
             }
             .circle-number{
+                overflow-x: visible;
                 position: relative;
                 left: -20px;
                 .number{
@@ -184,6 +186,9 @@ section.restaurants{
 }
 
 /* A voir pourquoi plus tard ! */
-*:not(i) {
+
+/*
+footer{
     overflow-x: hidden;
 }
+*/
