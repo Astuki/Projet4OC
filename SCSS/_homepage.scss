@@ -1,4 +1,4 @@
-@import 'mixins&var.scss';
+
 
 body{
     margin: 0;
@@ -9,7 +9,6 @@ body, .basic-text{
     font-size: 1rem;
     font-weight: 500;
 }
-
 
 .header {
   display: flex;
@@ -93,7 +92,7 @@ section.functioning{
             @include btn-component-secondary-grey();
             .fa-mobile-screen-button, .fa-list-ul, .fa-store {
                 position: relative;
-                left: -4%;
+                left: -20px;
             }
             .hover-effect{
                 color: #7e7e7e;
@@ -117,7 +116,6 @@ section.functioning{
 
 }
 
-
 section.restaurants{
     background-color: rgb(246, 246, 246);
     display: flex;
@@ -127,7 +125,7 @@ section.restaurants{
     justify-content: center;
     padding-bottom: 15%;
     .restaurant-title{
-        padding-right: 55%;
+        width: 90%;
     }
     .card{
         position: relative;
@@ -159,6 +157,7 @@ section.restaurants{
         
     }
 }
+
 .under-card{
     width: 100%;
     display: flex;
@@ -185,10 +184,7 @@ section.restaurants{
     @include footer();
 }
 
-/* A voir pourquoi plus tard ! */
 
-/*
-footer{
-    overflow-x: hidden;
-}
-*/
+@media (max-width: 1024px) {
+
+}   

@@ -10,11 +10,6 @@ $linear-gradient-like: hsl(267, 66%, 60%), hsla(317, 100%, 74%, 0.75);
 
 
 
-/*******************************************************************************************/
-
-
-
-
 @mixin btn-component-main-color( ){ /* Renseigner des paramètres sur les mixins */
     color: white;
     cursor: pointer;
@@ -100,8 +95,8 @@ $linear-gradient-like: hsl(267, 66%, 60%), hsla(317, 100%, 74%, 0.75);
     .proposal, .partnership{
         display: flex;
         align-items: center;
-        gap: 4%;
-        padding-left: 1%;
+        gap: 1rem;
+        padding-left: 1rem;
     }
     .lighter{
         font-weight: 400;
