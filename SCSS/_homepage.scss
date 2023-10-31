@@ -87,7 +87,7 @@ section.functioning{
         justify-content: center;
         align-items: center; 
         gap: 1.5rem;
-        padding-bottom: 20%;
+        padding-bottom: 4rem; /* à modifier pour mobile et que desktop passe */
         .grey-btn{
             @include btn-component-secondary-grey();
             .fa-mobile-screen-button, .fa-list-ul, .fa-store {
@@ -123,7 +123,7 @@ section.restaurants{
     gap: 1rem;
     align-items: center;
     justify-content: center;
-    padding-bottom: 15%;
+    padding-bottom: 4rem; /* à changer aussi */
     .restaurant-title{
         width: 90%;
     }
@@ -178,13 +178,35 @@ section.restaurants{
     @include liking();
 }
 
-
-
 .footer{
     @include footer();
 }
 
 
-@media (max-width: 1024px) {
+@media (min-width: 1024px) {
+    section.functioning{
+        justify-content: center;
+        align-items: center;
+        .functioning-title{
+            align-self: flex-start;
+        }    
+        .btn-functioning{
+            gap: 5%;
+            flex-flow: row nowrap;
+            width: 90%;
+            padding-bottom: 3rem;
+        }
+    }
 
+    section.restaurants > .restaurant-title{
+        flex-basis: 90%;
+    }
+    section.restaurants{
+        flex-flow: row wrap;
+        padding-bottom: 0;
+        .card{
+            width: 40%;
+            margin: 0 3rem 3rem 3rem;
+        }
+    }
 }   

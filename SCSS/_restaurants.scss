@@ -75,7 +75,7 @@ body, .basic-text{
             text-align: start;
             font-weight: 300;
             border-bottom: 3px solid;
-            border-image: linear-gradient(to right, $greenish-bg 15%,  #f6f6f6 5%) 1; /* Modifier pour valeur */
+            border-image: linear-gradient(to right, $greenish-bg 45px,  #f6f6f6 5px) 1; /* Modifier pour valeur */
         }
         .dish{
             width: 100%;
@@ -130,3 +130,19 @@ body, .basic-text{
 }
 
 /* a voir pour l'image à faire passer dessous au mentorat */
+
+@media (min-width: 1024px) {
+    .header{
+        .align{
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            grid-template-rows: 1fr;
+            .logo{
+                grid-column: 4;
+            }
+        }
+    }
+    .menu{
+        margin: 0 15% 0 15%;
+    }
+}
