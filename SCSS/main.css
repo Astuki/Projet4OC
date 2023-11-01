@@ -294,7 +294,7 @@ section.restaurants .card .badge-container span.green-badge {
     padding-bottom: 0;
   }
   section.restaurants .card {
-    width: 400px; /* 39.5% / 39 - 40% */
+    width: 400px; /* 39.5% / 39 - 40% vérifier que github pages prend bien 400px par card */
     margin: 0 3rem 3rem 3rem;
   }
 }
