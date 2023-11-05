@@ -27,24 +27,25 @@
             </a>
             <img class="logo" src="../images/logo/ohmyfood.png" alt="logo de OhMyFood">
         </div> 
-        <img class="dishes" src="../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"> 
+        <img 
+        class="dishes" 
+        src="../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+        alt="image d'un plat du restaurant 'La Palette Du Goût'"> 
     </header>
 
     <section class="menu">
-        
-        <article class="menu-like">
-            <h2 class="menu-name">La palette du Goût</h2>
+        <h2 class="menu-name">La palette du Goût</h2>
+        <div class="menu-like">
             <label class="like">
                 <input class="hidden" type="checkbox">
                     <i class="hide gradient fa-solid fa-heart fa-xl"></i>
                     <i class="fa-regular fa-heart fa-xl" ></i>
-                </input>
             </label>
-        </article>
+        </div>
 
         <article class="dining">
             <h3 class="stage">ENTREES</h3>
-            <button class="dish">
+            <div class="dish">
                 <div class="container">
                     <h4 class="dish-name">Fricassée d'escargots</h4>
                     <div class="under-dish">
@@ -55,8 +56,8 @@
                 <div class="animate">
                     <i class="fa-regular fa-2x fa-circle-check"></i>
                 </div>
-            </button> <!-- ils sont tous interactifs faire un component à reuse -->
-            <button class="dish">
+            </div> <!-- ils sont tous interactifs faire un component à reuse -->
+            <div class="dish">
                 <div class="container">
                     <h4 class="dish-name">Foie gras de canard mi-cuit</h4>
                     <div class="under-dish">
@@ -67,8 +68,8 @@
                 <div class="animate">
                     <i class="fa-regular fa-2x fa-circle-check"></i>
                 </div>
-            </button> 
-            <button class="dish">
+            </div> 
+            <div class="dish">
                 <div class="container">
                     <h4 class="dish-name">Oeuf au plat</h4>
                     <div class="under-dish">
@@ -79,12 +80,12 @@
                 <div class="animate">
                     <i class="fa-regular fa-2x fa-circle-check"></i>
                 </div>
-            </button>
+            </div>
         </article>
 
         <article class="dining">
             <h3 class="stage">PLATS</h3>
-            <button class="dish">
+            <div class="dish">
                 <div class="container">
                     <h4 class="dish-name">Filets de boeuf aux herbes</h4>
                     <div class="under-dish">
@@ -95,8 +96,8 @@
                 <div class="animate">
                     <i class="fa-regular fa-2x fa-circle-check"></i>
                 </div>
-            </button>
-            <button class="dish">
+            </div>
+            <div class="dish">
                 <div class="container">
                     <h4 class="dish-name">Parmentier de queue de boeuf</h4>
                     <div class="under-dish">
@@ -107,8 +108,8 @@
                 <div class="animate">
                     <i class="fa-regular fa-2x fa-circle-check"></i>
                 </div>
-            </button>
-            <button class="dish">
+            </div>
+            <div class="dish">
                 <div class="container">
                     <h4 class="dish-name">Filet de turbot</h4>
                     <div class="under-dish">
@@ -119,12 +120,12 @@
                 <div class="animate">
                     <i class="fa-regular fa-2x fa-circle-check"></i>
                 </div>
-            </button>
+            </div>
         </article>
 
         <article class="dining">
             <h3 class="stage">DESSERTS</h3>
-            <button class="dish">
+            <div class="dish">
                 <div class="container">
                     <h4 class="dish-name">Paris-Brest</h4>
                     <div class="under-dish">
@@ -135,8 +136,8 @@
                 <div class="animate">
                     <i class="fa-regular fa-2x fa-circle-check"></i>
                 </div>
-            </button>
-            <button class="dish">
+            </div>
+            <div class="dish">
                 <div class="container">
                     <h4 class="dish-name">Macaron au chocolat d'exception</h4>
                     <div class="under-dish">
@@ -147,8 +148,8 @@
                 <div class="animate">
                     <i class="fa-regular fa-2x fa-circle-check"></i>
                 </div>
-            </button>
-            <button class="dish">
+            </div>
+            <div class="dish">
                 <div class="container">
                     <h4 class="dish-name">Mousse au chocolat</h4>
                     <div class="under-dish">
@@ -159,7 +160,7 @@
                 <div class="animate">
                     <i class="fa-regular fa-2x fa-circle-check"></i>
                 </div>
-            </button>
+            </div>
         </article>
 
         <button class="btn-main-color basic-text"> <!-- Btn mixin main color -->

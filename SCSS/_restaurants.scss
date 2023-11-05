@@ -1,13 +1,15 @@
 body {
   margin: 0;
 }
-
+/* Problème de détection au W3C comme si c'était du HTML pour tous les SCSS mentorat */
 body,
 .basic-text {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
   font-weight: 500;
 }
+
+
 
 .header {
   display: flex;
@@ -45,23 +47,23 @@ body,
   border-radius: 2rem 2rem 0 0;
   background-color: #f6f6f6;
   display: flex;
-  flex-flow: column;
+  flex-flow: row wrap;
   align-items: center;
   justify-content: center;
   padding-bottom: 50px;
+  .menu-name {
+    font-family: "Shrikhand", sans-serif;
+    font-size: 1.75rem;
+    font-weight: 400;
+    white-space: nowrap;
+    padding-right: 30px;
+  }
   .menu-like {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
     justify-content: space-between;
     @include liking();
-    .menu-name {
-      font-family: "Shrikhand", sans-serif;
-      font-size: 1.75rem;
-      font-weight: 400;
-      white-space: nowrap;
-      padding-right: 35px;
-    }
   }
   .dining {
     width: 95%;

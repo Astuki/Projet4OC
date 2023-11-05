@@ -1,8 +1,10 @@
 @charset "UTF-8";
+/* Problème de détection au W3C comme si c'était du HTML pour tous les SCSS mentorat */
 body {
   margin: 0;
 }
 
+/* Problème de détection au W3C comme si c'était du HTML pour tous les SCSS mentorat */
 body,
 .basic-text {
   font-family: "Roboto", sans-serif;
@@ -19,6 +21,14 @@ body,
   color: inherit;
 }
 
+/* .everywhere_centered{
+    display: block;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
 .header {
   display: flex;
   flex-flow: column wrap;
@@ -316,6 +326,7 @@ body {
   margin: 0;
 }
 
+/* Problème de détection au W3C comme si c'était du HTML pour tous les SCSS mentorat */
 body,
 .basic-text {
   font-family: "Roboto", sans-serif;
@@ -362,10 +373,17 @@ body,
   border-radius: 2rem 2rem 0 0;
   background-color: #f6f6f6;
   display: flex;
-  flex-flow: column;
+  flex-flow: row wrap;
   align-items: center;
   justify-content: center;
   padding-bottom: 50px;
+}
+.menu .menu-name {
+  font-family: "Shrikhand", sans-serif;
+  font-size: 1.75rem;
+  font-weight: 400;
+  white-space: nowrap;
+  padding-right: 30px;
 }
 .menu .menu-like {
   display: flex;
@@ -405,13 +423,6 @@ body,
 }
 .menu .menu-like .like .hidden:checked ~ .fa-regular {
   opacity: 0;
-}
-.menu .menu-like .menu-name {
-  font-family: "Shrikhand", sans-serif;
-  font-size: 1.75rem;
-  font-weight: 400;
-  white-space: nowrap;
-  padding-right: 35px;
 }
 .menu .dining {
   width: 95%;
@@ -571,4 +582,5 @@ body,
   .menu {
     margin: 0 15% 0 15%;
   }
-}/*# sourceMappingURL=main.css.map */
+}
+/* Problème de détection au W3C comme si c'était du HTML pour tous les SCSS mentorat *//*# sourceMappingURL=main.css.map */

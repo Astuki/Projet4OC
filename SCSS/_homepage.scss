@@ -1,7 +1,7 @@
 body {
   margin: 0;
 }
-
+/* Problème de détection au W3C comme si c'était du HTML pour tous les SCSS mentorat */
 body,
 .basic-text {
   font-family: "Roboto", sans-serif;
@@ -17,6 +17,15 @@ body,
   text-decoration: none;
   color: inherit;
 }
+
+/* .everywhere_centered{
+    display: block;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
 
 .header {
   display: flex;
