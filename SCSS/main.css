@@ -294,7 +294,7 @@ section.restaurants .card .badge-container span.green-badge {
     padding-bottom: 0;
   }
   section.restaurants .card {
-    width: 400px; /* 39.5% / 39 - 40% vérifier que github pages prend bien 400px par card */
+    width: 39%; /* 39.5% / 39 - 40% */
     margin: 0 3rem 3rem 3rem;
   }
 }
@@ -302,7 +302,8 @@ body {
   margin: 0;
 }
 
-body, .basic-text {
+body,
+.basic-text {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
   font-weight: 500;
@@ -399,7 +400,7 @@ body, .basic-text {
   padding-right: 35px;
 }
 .menu .dining {
-  width: 90%;
+  width: 95%;
   display: flex;
   flex-flow: column;
   align-items: center;
@@ -414,38 +415,72 @@ body, .basic-text {
      border-image: linear-gradient(to right, #99e2d0 45px, #f6f6f6 5px) 1; /* Modifier pour valeur */
 }
 .menu .dining .dish {
+  overflow-x: hidden;
   width: 100%;
   border-radius: 1rem;
   background: white;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.25);
   margin-bottom: 25px;
-  padding-left: 14px;
-  padding-right: 14px;
+  padding: 0;
   border: none;
   display: flex;
-  flex-flow: column;
+  flex-flow: row nowrap;
+  align-items: stretch;
 }
-.menu .dining .dish .dish-name {
-  font-size: 1.125rem;
+.menu .dining .dish .container {
+  padding-left: 5px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.menu .dining .dish .container .dish-name {
+  align-self: flex-start;
+  font-size: 17px;
   font-weight: 600;
   margin: 15px 0px 0px 0px;
 }
-.menu .dining .dish .under-dish {
+.menu .dining .dish .container .under-dish {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.menu .dining .dish .under-dish .dish-text {
+.menu .dining .dish .container .under-dish .dish-text {
   margin-top: 5px;
   font-weight: 300;
 }
-.menu .dining .dish .under-dish .flex-end {
+.menu .dining .dish .container .under-dish .flex-end {
+  margin-right: 15px;
   font-size: 15px;
   color: #353535;
   font-weight: 700;
+  display: flex;
+}
+.menu .dining .dish .animate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  background-color: #99e2d0;
+  position: relative;
+  margin-right: -75px;
+  visibility: hidden;
+  border-radius: 0 1rem 1rem 0;
+  transition: margin-right 0.3s ease;
+}
+.menu .dining .dish .animate .fa-circle-check {
+  color: #99e2d0;
+  background-color: white; /* Bug à voir mentorat */
+  border-radius: 100%; /* Bug à voir mentorat */
+  box-shadow: inset 0px 0px 0px 3px #99e2d0; /* Bug à voir mentorat */
+}
+.menu .dining .dish:hover .animate {
+  visibility: visible;
+  margin-right: 0px;
 }
 
+/* Animations des active ( click ) des entrées plats desserts pour mobile */
+/* Animations des hovers des entrées plats desserts pour desktop */
 .btn-main-color {
   color: white;
   cursor: pointer;
@@ -457,7 +492,8 @@ body, .basic-text {
   height: 3.125rem;
 }
 
-.footer { /* écart entre footer et section menu dû à la position pour que img soit sous le men u*/
+.footer {
+  /* écart entre footer et section menu dû à la position pour que img soit sous le men u*/
   background-color: #353535;
   color: white;
   display: flex;
