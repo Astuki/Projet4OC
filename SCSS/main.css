@@ -3,10 +3,20 @@ body {
   margin: 0;
 }
 
-body, .basic-text {
+body,
+.basic-text {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
   font-weight: 500;
+}
+
+.main-color {
+  color: #9356dc;
+}
+
+.no-basic-styling {
+  text-decoration: none;
+  color: inherit;
 }
 
 .header {
@@ -21,7 +31,7 @@ body, .basic-text {
   padding: 0.875rem 5.5625rem 0.8125rem 5.5625rem;
 }
 .header .location {
-  background-color: var(--Grey-2, #EAEAEA);
+  background-color: var(--Grey-2, #eaeaea);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -38,7 +48,7 @@ body, .basic-text {
 }
 
 section.explanation {
-  background-color: #F6F6F6;
+  background-color: #f6f6f6;
   padding: 2rem 0 2rem 0;
   display: flex;
   flex-flow: column wrap;
@@ -46,7 +56,8 @@ section.explanation {
   text-align: center;
   gap: 1rem;
 }
-section.explanation .title { /* Attention est used pour plusieurs heading penser à en faire une fonction sans le width */
+section.explanation .title {
+  /* Attention est used pour plusieurs heading penser à en faire une fonction sans le width */
   color: black;
   margin: 0;
   width: 75%;
@@ -95,7 +106,7 @@ section.functioning .btn-functioning {
   padding-bottom: 4rem; /* à modifier pour mobile et que desktop passe */
 }
 section.functioning .btn-functioning .grey-btn {
-  background: #F6F6F6;
+  background: #f6f6f6;
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -105,15 +116,14 @@ section.functioning .btn-functioning .grey-btn {
   border-radius: 1.25rem;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
 }
-section.functioning .btn-functioning .grey-btn .fa-mobile-screen-button, section.functioning .btn-functioning .grey-btn .fa-list-ul, section.functioning .btn-functioning .grey-btn .fa-store {
+section.functioning .btn-functioning .grey-btn .fa-mobile-screen-button,
+section.functioning .btn-functioning .grey-btn .fa-list-ul,
+section.functioning .btn-functioning .grey-btn .fa-store {
   position: relative;
   left: -20px;
 }
 section.functioning .btn-functioning .grey-btn .hover-effect {
   color: #7e7e7e;
-}
-section.functioning .btn-functioning .grey-btn .hover-effect:hover {
-  color: #9356dc;
 }
 section.functioning .btn-functioning .grey-btn .circle-number {
   overflow-x: visible;
@@ -125,6 +135,9 @@ section.functioning .btn-functioning .grey-btn .circle-number .number {
   position: relative;
   color: white;
   left: -50%;
+}
+section.functioning .btn-functioning .grey-btn:hover > .hover-effect {
+  color: #9356dc;
 }
 
 section.restaurants {
@@ -244,7 +257,8 @@ section.restaurants .card .badge-container span.green-badge {
   letter-spacing: 1px;
   font-weight: 400;
 }
-.footer .proposal, .footer .partnership {
+.footer .proposal,
+.footer .partnership {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -506,7 +520,8 @@ body,
   letter-spacing: 1px;
   font-weight: 400;
 }
-.footer .proposal, .footer .partnership {
+.footer .proposal,
+.footer .partnership {
   display: flex;
   align-items: center;
   gap: 10px;

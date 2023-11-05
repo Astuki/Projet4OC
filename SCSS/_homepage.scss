@@ -1,13 +1,21 @@
-
-
-body{
-    margin: 0;
+body {
+  margin: 0;
 }
 
-body, .basic-text{
-    font-family: 'Roboto', sans-serif;
-    font-size: 1rem;
-    font-weight: 500;
+body,
+.basic-text {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.main-color {
+  color: $main-color;
+}
+
+.no-basic-styling {
+  text-decoration: none;
+  color: inherit;
 }
 
 .header {
@@ -15,198 +23,196 @@ body, .basic-text{
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
-    .logo {
-        width: 12.3125rem;
-        height: 2.25rem;
-        padding: 0.875rem 5.5625rem 0.8125rem 5.5625rem;
-    }
-    .location {
-        background-color: var(--Grey-2, #EAEAEA);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 1rem;
-        width: 100%;
-        .fa-location-dot {
-            width: 0.75rem;
-            height: 1rem;
-        }
-        .location-text{
-                color: #353535;
-                font-weight: 500;
-        }
-    }
-}
-
-
-section.explanation{
-    background-color: #F6F6F6;
-    padding: 2rem 0 2rem 0;
+  .logo {
+    width: 12.3125rem;
+    height: 2.25rem;
+    padding: 0.875rem 5.5625rem 0.8125rem 5.5625rem;
+  }
+  .location {
+    background-color: var(--Grey-2, #eaeaea);
     display: flex;
-    flex-flow: column wrap;
-    align-items: center;
-    text-align: center;
-    gap: 1rem;
-        .title{ /* Attention est used pour plusieurs heading penser à en faire une fonction sans le width */
-            color: black;
-            margin: 0;
-            width: 75%;
-            font-size: 1.5rem; /* all values are taken from Figma for now / toutes les valeurs sont prises de figma pour l'instant */
-            font-weight: 700;
-        }
-        .explanation-text{
-            color: #353535;
-            margin: 0;
-            font-size: 1.125rem;
-            font-weight: 300;
-            padding-bottom: 1rem; 
-        }
-        .btn-main-color{
-            @include btn-component-main-color();
-            font-family: 'Roboto', sans-serif;
-            font-size: 1rem;
-        }
-        .btn-main-color:hover{
-            opacity: 0.75;
-            transition: opacity 300ms ease-in-out ;
-        }
-}
-
-
-section.functioning{
-    display: flex;
-    flex-flow: column wrap;
-    gap: 1rem;
-    .functioning-title{
-        padding-left: 5%;
-    }
-    .btn-functioning{
-        max-width: 100%;
-        display: flex;
-        flex-flow: column wrap;
-        justify-content: center;
-        align-items: center; 
-        gap: 1.5rem;
-        padding-bottom: 4rem; /* à modifier pour mobile et que desktop passe */
-        .grey-btn{
-            @include btn-component-secondary-grey();
-            .fa-mobile-screen-button, .fa-list-ul, .fa-store {
-                position: relative;
-                left: -20px;
-            }
-            .hover-effect{
-                color: #7e7e7e;
-            }
-            .hover-effect:hover{
-                color: $main-color;
-            }
-            .circle-number{
-                overflow-x: visible;
-                position: relative;
-                left: -20px;
-                .number{
-                    font-family: 'Roboto', sans-serif;
-                    position: relative;
-                    color: white;
-                    left: -50%;
-                }
-            }
-        }
-    }
-
-}
-
-section.restaurants{
-    background-color: rgb(246, 246, 246);
-    display: flex;
-    flex-flow: column wrap;
-    gap: 1rem;
-    align-items: center;
     justify-content: center;
-    padding-bottom: 4rem; /* à changer aussi */
-    .restaurant-title{
-        width: 90%;
-    }
-    .card{
-        position: relative;
-        background: white;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-flow: column wrap;
-        border-radius: 1rem;
-        width: 90%;
-        a.width{
-            width: 100%;
-            .dishes{
-                width: 100%;
-                height: 235px; /* between desktop & mobile the height seem to be constant */
-                object-fit: cover;  
-                border-radius: 1rem 1rem 0 0;
-            }
-        }
-        .badge-container {
-            position: absolute;
-            top: 10px; 
-            right: 10px; 
-            span.green-badge{
-                display: inline-block;
-                @include badge-green-new();
-            }
-        }
-        
-    }
-}
-
-.under-card{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
     align-items: center;
-    div.card-text{
-        padding-left: 3%;
-        .menu-name{
-            margin-bottom: 5%;
-            font-size: 1.125rem;
-            font-weight: 700;
-        }
-        .light{
-            margin-top: 0;
-            font-weight: 300;
-        } 
+    gap: 1rem;
+    width: 100%;
+    .fa-location-dot {
+      width: 0.75rem;
+      height: 1rem;
     }
-    @include liking();
+    .location-text {
+      color: #353535;
+      font-weight: 500;
+    }
+  }
 }
 
-.footer{
-    @include footer();
+section.explanation {
+  background-color: #f6f6f6;
+  padding: 2rem 0 2rem 0;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  .title {
+    /* Attention est used pour plusieurs heading penser à en faire une fonction sans le width */
+    color: black;
+    margin: 0;
+    width: 75%;
+    font-size: 1.5rem; /* all values are taken from Figma for now / toutes les valeurs sont prises de figma pour l'instant */
+    font-weight: 700;
+  }
+  .explanation-text {
+    color: #353535;
+    margin: 0;
+    font-size: 1.125rem;
+    font-weight: 300;
+    padding-bottom: 1rem;
+  }
+  .btn-main-color {
+    @include btn-component-main-color();
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+  }
+  .btn-main-color:hover {
+    opacity: 0.75;
+    transition: opacity 300ms ease-in-out;
+  }
 }
 
+section.functioning {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 1rem;
+  .functioning-title {
+    padding-left: 5%;
+  }
+  .btn-functioning {
+    max-width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    padding-bottom: 4rem; /* à modifier pour mobile et que desktop passe */
+    .grey-btn {
+      @include btn-component-secondary-grey();
+      .fa-mobile-screen-button,
+      .fa-list-ul,
+      .fa-store {
+        position: relative;
+        left: -20px;
+      }
+      .hover-effect {
+        color: #7e7e7e;
+      }
+      .circle-number {
+        overflow-x: visible;
+        position: relative;
+        left: -20px;
+        .number {
+          font-family: "Roboto", sans-serif;
+          position: relative;
+          color: white;
+          left: -50%;
+        }
+      }
+    }
+    .grey-btn:hover > .hover-effect {
+      color: $main-color;
+    }
+  }
+}
+
+section.restaurants {
+  background-color: rgb(246, 246, 246);
+  display: flex;
+  flex-flow: column wrap;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 4rem; /* à changer aussi */
+  .restaurant-title {
+    width: 90%;
+  }
+  .card {
+    position: relative;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    border-radius: 1rem;
+    width: 90%;
+    a.width {
+      width: 100%;
+      .dishes {
+        width: 100%;
+        height: 235px; /* between desktop & mobile the height seem to be constant */
+        object-fit: cover;
+        border-radius: 1rem 1rem 0 0;
+      }
+    }
+    .badge-container {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      span.green-badge {
+        display: inline-block;
+        @include badge-green-new();
+      }
+    }
+  }
+}
+
+.under-card {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  div.card-text {
+    padding-left: 3%;
+    .menu-name {
+      margin-bottom: 5%;
+      font-size: 1.125rem;
+      font-weight: 700;
+    }
+    .light {
+      margin-top: 0;
+      font-weight: 300;
+    }
+  }
+  @include liking();
+}
+
+.footer {
+  @include footer();
+}
 
 @media (min-width: 1024px) {
-    section.functioning{
-        justify-content: center;
-        align-items: center;
-        .functioning-title{
-            align-self: flex-start;
-        }    
-        .btn-functioning{
-            gap: 5%;
-            flex-flow: row nowrap;
-            width: 90%;
-            padding-bottom: 3rem;
-        }
+  section.functioning {
+    justify-content: center;
+    align-items: center;
+    .functioning-title {
+      align-self: flex-start;
     }
+    .btn-functioning {
+      gap: 5%;
+      flex-flow: row nowrap;
+      width: 90%;
+      padding-bottom: 3rem;
+    }
+  }
 
-    section.restaurants > .restaurant-title{
-        flex-basis: 90%;
+  section.restaurants > .restaurant-title {
+    flex-basis: 90%;
+  }
+  section.restaurants {
+    flex-flow: row wrap;
+    padding-bottom: 0;
+    .card {
+      width: 39%; /* 39.5% / 39 - 40% */
+      margin: 0 3rem 3rem 3rem;
     }
-    section.restaurants{
-        flex-flow: row wrap;
-        padding-bottom: 0;
-        .card{
-            width: 39%; /* 39.5% / 39 - 40% */
-            margin: 0 3rem 3rem 3rem;
-        }
-    }
-}   
+  }
+}

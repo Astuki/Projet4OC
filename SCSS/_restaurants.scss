@@ -88,36 +88,36 @@ body,
       display: flex;
       flex-flow: row nowrap;
       align-items: stretch;
-      .container{
+      .container {
         padding-left: 5px;
         display: flex;
         flex-direction: column;
         width: 100%;
         .dish-name {
-            align-self: flex-start;
-            font-size: 17px;
-            font-weight: 600;
-            margin: 15px 0px 0px 0px;
+          align-self: flex-start;
+          font-size: 17px;
+          font-weight: 600;
+          margin: 15px 0px 0px 0px;
         }
         .under-dish {
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            .dish-text {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          .dish-text {
             margin-top: 5px;
             font-weight: 300;
-            }
-            .flex-end {
+          }
+          .flex-end {
             margin-right: 15px;
             font-size: 15px;
             color: $darker;
             font-weight: 700;
             display: flex;
-            }
+          }
         }
       }
-      .animate{
+      .animate {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -128,17 +128,17 @@ body,
         visibility: hidden;
         border-radius: 0 1rem 1rem 0;
         transition: margin-right 0.3s ease;
-        .fa-circle-check{
-            color: $greenish-bg; 
-            background-color: white; /* Bug à voir mentorat */
-            border-radius: 100%; /* Bug à voir mentorat */
-            box-shadow: inset 0px 0px 0px 3px $greenish-bg; /* Bug à voir mentorat */
+        .fa-circle-check {
+          color: $greenish-bg;
+          background-color: white; /* Bug à voir mentorat */
+          border-radius: 100%; /* Bug à voir mentorat */
+          box-shadow: inset 0px 0px 0px 3px $greenish-bg; /* Bug à voir mentorat */
         }
       }
     }
-    .dish:hover .animate{
-        visibility: visible;
-        margin-right: 0px;
+    .dish:hover .animate {
+      visibility: visible;
+      margin-right: 0px;
     }
   }
 }
