@@ -1,5 +1,4 @@
 @charset "UTF-8";
-/* Problème de détection au W3C comme si c'était du HTML pour tous les SCSS mentorat */
 body {
   margin: 0;
 }
@@ -58,11 +57,10 @@ section.explanation {
   gap: 1rem;
 }
 section.explanation .title {
-  /* Attention est used pour plusieurs heading penser à en faire une fonction sans le width */
   color: black;
   margin: 0;
   width: 75%;
-  font-size: 1.5rem; /* all values are taken from Figma for now / toutes les valeurs sont prises de figma pour l'instant */
+  font-size: 1.5rem;
   font-weight: 700;
 }
 section.explanation .explanation-text {
@@ -109,7 +107,7 @@ section.functioning .btn-functioning {
   justify-content: center;
   align-items: center;
   gap: 1.5rem;
-  padding-bottom: 4rem; /* à modifier pour mobile et que desktop passe */
+  padding-bottom: 4rem;
 }
 section.functioning .btn-functioning .grey-btn {
   background: #f6f6f6;

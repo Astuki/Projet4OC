@@ -55,11 +55,10 @@ section.explanation {
   text-align: center;
   gap: 1rem;
   .title {
-    /* Attention est used pour plusieurs heading penser à en faire une fonction sans le width */
     color: black;
     margin: 0;
     width: 75%;
-    font-size: 1.5rem; /* all values are taken from Figma for now / toutes les valeurs sont prises de figma pour l'instant */
+    font-size: 1.5rem;
     font-weight: 700;
   }
   .explanation-text {
@@ -99,7 +98,7 @@ section.functioning {
     justify-content: center;
     align-items: center;
     gap: 1.5rem;
-    padding-bottom: 4rem; /* à modifier pour mobile et que desktop passe */
+    padding-bottom: 4rem;
     .grey-btn {
       @include btn-component-secondary-grey();
       .fa-mobile-screen-button,
