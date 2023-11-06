@@ -1,7 +1,7 @@
 body {
   margin: 0;
 }
-/* Problème de détection au W3C comme si c'était du HTML pour tous les SCSS mentorat */
+
 body,
 .basic-text {
   font-family: "Roboto", sans-serif;
@@ -18,15 +18,6 @@ body,
   color: inherit;
 }
 
-/* .everywhere_centered{
-    display: block;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-} */
-
 .header {
   display: flex;
   flex-flow: column wrap;
@@ -35,7 +26,7 @@ body,
   .logo {
     width: 12.3125rem;
     height: 2.25rem;
-    padding: 0.875rem 5.5625rem 0.8125rem 5.5625rem;
+    padding: 0.875rem 0 0.8125rem 0;
   }
   .location {
     background-color: var(--Grey-2, #eaeaea);
@@ -86,6 +77,11 @@ section.explanation {
   .btn-main-color:hover {
     opacity: 0.75;
     transition: opacity 300ms ease-in-out;
+  }
+  .centered{
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 
@@ -225,3 +221,59 @@ section.restaurants {
     }
   }
 }
+
+
+
+
+
+
+  .loader {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    position: fixed;
+    left: calc(50% - 20px);
+    top: 50%;
+    transform: translate(-50%, -50%);
+    animation: rotate 0.75s linear infinite, fadeOut 0.5s 2.5s forwards;
+  }
+  .loader::before , .loader::after {
+    content: "";
+    box-sizing: border-box;
+    position: fixed;
+    inset: 0px;
+    border-radius: 50%;
+    border: 5px solid $main-color;
+    animation: prixClipFix 1s linear forwards;
+  }
+  .loader::after{
+    transform: rotate3d(90, 90, 0, 180deg );
+    border-color: $greenish-bg;
+  }
+
+  @keyframes rotate {
+    0%   {transform: rotate(0deg)}
+    50%   {transform: rotate(180deg);}
+    100%   {transform: rotate(360deg)}
+  }
+
+  @keyframes prixClipFix {
+      0%   {clip-path:polygon(50% 50%,0 0,0 0,0 0,0 0,0 0)}
+      50%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 0,100% 0,100% 0)}
+      75%, 100%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,100% 100%,100% 100%)}
+  } 
+
+  @keyframes fadeOut {
+    from { opacity: 1; z-index: 100; }
+    to { opacity: 0; z-index: -100; }
+  }
+
+
+  .loader ~ *{
+    animation: invisible 3s forwards;
+  }
+  @keyframes invisible {
+    0% { opacity: 0;}
+    80% { opacity: 0; }
+    100% {opacity: 1}
+  }

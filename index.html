@@ -19,12 +19,14 @@
     >
     <link href="SCSS/main.css" rel="stylesheet">
     <!-- Style De La HomePage -->
+    <!--enlever les styles inline -->
   </head>
   <body>
+    <div class="loader"></div>
     <header class="header">
       <img class="logo" src="images/logo/ohmyfood.png" alt="logo de OhMyFood">
       <div class="location">
-        <i class="fa-solid fa-location-dot" style="color: #353535"></i>
+        <i class="fa-solid fa-location-dot"></i>
         <p class="basic-text location-text">Paris, Belleville</p>
       </div>
     </header>
@@ -34,12 +36,8 @@
       <p class="basic-text explanation-text">
         Découvrez des restaurants d'exception, sélectionnés par nos soins.
       </p>
-      <a href="#go-to-restaurant">
-        <button class="btn-main-color basic-text">
-          <!--W3C validator pas enfant btn ou en parent le a 
-        CSS style déjà fait si faut le remettre en child le <a> mentorat -->
-          Explorer nos restaurants
-        </button>
+      <a class="no-basic-styling btn-main-color basic-text centered" href="#go-to-restaurant">
+          <p>Explorer nos restaurants</p>
       </a>
     </section>
 
@@ -55,7 +53,6 @@
           </span>
           <i class="hover-effect fa-solid fa-mobile-screen-button fa-lg"></i>
           <span class="basic-text">Choisissez un restaurant</span>
-          <!-- div et p prohibited use span to write text mentorat -->
         </button>
 
         <button class="grey-btn">
@@ -66,7 +63,6 @@
           </span>
           <i class="hover-effect fa-solid fa-list-ul fa-lg"></i>
           <span class="basic-text">Composez votre menu</span>
-          <!-- div et p prohibited use span to write text mentorat -->
         </button>
 
         <button class="grey-btn">
@@ -77,7 +73,6 @@
           </span>
           <i class="hover-effect fa-solid fa-store fa-lg"></i>
           <span class="basic-text">Dégustez au restaurant</span>
-          <!-- div et p prohibited use span to write text mentorat -->
         </button>
       </div>
     </section>
@@ -87,8 +82,6 @@
 
       <article class="card">
         <a class="width no-basic-styling" href="restaurants/palette.html">
-          <!-- peux pas mettre <a> sur toute la card
-            error W3C à cause du label qui ne peux être descendant de a -->
           <img
             class="dishes"
             src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"

@@ -1,7 +1,11 @@
 body {
   margin: 0;
 }
-/* Problème de détection au W3C comme si c'était du HTML pour tous les SCSS mentorat */
+/* merge master et main et la supprimer penser à le mettre très bas après avec des keyframes */
+
+/* Soutenance expliquer les animations */
+/* savoir use Git et github */
+/* connaître ce qu'est le SCSS */
 body,
 .basic-text {
   font-family: "Roboto", sans-serif;
@@ -132,9 +136,9 @@ body,
         transition: margin-right 0.3s ease;
         .fa-circle-check {
           color: $greenish-bg;
-          background-color: white; /* Bug à voir mentorat */
-          border-radius: 100%; /* Bug à voir mentorat */
-          box-shadow: inset 0px 0px 0px 3px $greenish-bg; /* Bug à voir mentorat */
+          background-color: white; 
+          border-radius: 100%;
+          box-shadow: inset 0px 0px 0px 3px $greenish-bg; 
         }
       }
     }
@@ -142,22 +146,24 @@ body,
       visibility: visible;
       margin-right: 0px;
     }
+    .dish:hover .dish-text{
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      width: 250px;
+    }
   }
 }
-
-/* Animations des active ( click ) des entrées plats desserts pour mobile */
-/* Animations des hovers des entrées plats desserts pour desktop */
 
 .btn-main-color {
   @include btn-component-main-color();
 }
 
 .footer {
-  /* écart entre footer et section menu dû à la position pour que img soit sous le men u*/
   @include footer();
 }
 
-/* a voir mentorat */
+
 .align {
   overflow-x: hidden;
 }
@@ -165,7 +171,7 @@ body,
   overflow-x: hidden;
 }
 
-/* a voir pour l'image à faire passer dessous au mentorat */
+
 
 @media (min-width: 1024px) {
   .header {
