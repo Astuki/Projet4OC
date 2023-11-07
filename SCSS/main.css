@@ -396,7 +396,6 @@ body {
   margin: 0;
 }
 
-/* merge master et main et la supprimer penser à le mettre très bas après avec des keyframes */
 /* Soutenance expliquer les animations */
 /* savoir use Git et github */
 /* connaître ce qu'est le SCSS */
@@ -580,7 +579,7 @@ body,
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  width: 250px;
+  width: calc(250px + 4vw);
 }
 
 .btn-main-color {
@@ -655,6 +654,9 @@ body,
   }
   .menu {
     margin: 0 15% 0 15%;
+  }
+  .menu .dining .dish:hover .dish-text {
+    width: 450px;
   }
 }
 /* Problème de détection au W3C comme si c'était du HTML pour tous les SCSS mentorat *//*# sourceMappingURL=main.css.map */
